@@ -1,26 +1,33 @@
 public class EvenDigit{
      
-    static boolean Even(int number){
-        int count=0;
-        while(number>0){
-
-            count++;
-            number=number/10;
+    static int Even(int[] arr){
+        
+        int a=0;
+        for(int i=0; i<arr.length;i++){
+            int count=0;
+            int num=arr[i];
+            if(num>0){
+            while(num>0){
+                num=num/10;
+                count++;
+            }
+            if(count%2==0){
+                 a++;
+            }
+            }
+      
         }
-
-        if (count%2==0){
-            return true;
-        }
-        return false;
+        return a;
     }
 
     public static void main(String[] args) {
-        int num=1564434;
-         boolean result=Even(num);
-         System.out.println(result);
+        int[] arr={6,56,32,61,41,71,81,41};
+        
+         int result=Even(arr);
+
+         
+         System.out.println("Even digit number: "+result);
 
     }
-
-
-
+ 
 }
