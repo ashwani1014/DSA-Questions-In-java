@@ -1,10 +1,5 @@
 class infinitearray {
-
-    public static int infinitearray(int arr[],int target,int start,int end)
-
-
-
-
+ 
 
 
 
