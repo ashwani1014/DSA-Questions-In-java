@@ -1,4 +1,5 @@
-class Solution {
+package Sorting;
+class A1122 {
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
             int k=0;
 
