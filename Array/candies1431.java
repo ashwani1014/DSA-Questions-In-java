@@ -1,5 +1,6 @@
-class Solution {
-    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+package Array;
+class candies1431 {
+    public static  List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
          
           List<Boolean> ans=new ArrayList<>();
              
