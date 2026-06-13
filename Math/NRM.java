@@ -10,7 +10,7 @@ public class NRM {
 
             double root = 0.5 * (guess + (n / guess));
 
-            if (Math.abs(guess * guess - n) < 1e-6) {
+            if (Math.abs(guess * guess - n) < 1) {
                 break;
             }
 
