@@ -2,7 +2,7 @@ package Sorting;
 
 import java.util.Arrays;
 
-public class Insertion {
+public class Sorting {
     
 static void InsertionSort(int []arr){
 

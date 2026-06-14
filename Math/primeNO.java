@@ -1,6 +1,6 @@
 package Math;
 
-public class PrimeNo {
+public class primeNO {
 
     public static boolean Prime(int n) {
 

@@ -1,5 +1,5 @@
- package BinarySearch;
-class Solution {
+ 
+class FirstandLastocc {
 
     public int[] searchRange(int[] nums, int target) {
 

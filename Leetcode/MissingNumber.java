@@ -1,6 +1,6 @@
 package Leetcode;
 class Solution {
-    public int missingNumber(int[] nums) {
+    public int MissingNumber(int[] nums) {
          int i=0;
        while(i<nums.length){
        int correct=nums[i];
