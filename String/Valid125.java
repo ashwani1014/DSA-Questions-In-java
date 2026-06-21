@@ -1,0 +1,27 @@
+package String;
+public class Valid125 {
+    
+
+
+ 
+    public boolean isPalindrome(String s) {
+         s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
+        String ans=s;
+         String  a="";
+         
+         for(int i=s.length()-1;i>=0;i--){
+            a=a+s.charAt(i);
+            
+         }
+         if(a.equals(ans)){
+            return true;
+         }
+         return false;
+           
+
+
+
+
+    }
+}
+ 
