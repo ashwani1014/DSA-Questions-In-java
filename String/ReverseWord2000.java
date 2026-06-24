@@ -1,5 +1,5 @@
 package String;
-public class ReverseWord {
+public class ReverseWord2000 {
     
 
      
