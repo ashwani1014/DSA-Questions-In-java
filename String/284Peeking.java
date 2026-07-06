@@ -14,3 +14,6 @@ public class PeekExample {
         System.out.println("Stack after peek: " + stack); // [10, 20, 30]
     }
 }
+
+
+
