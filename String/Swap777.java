@@ -3,7 +3,7 @@ package String;
 public class Swap777 {
     
 
-    class Solution {
+   
 
     public boolean canTransform(String start, String end) {
 
@@ -47,4 +47,4 @@ public class Swap777 {
         return true;
     }
 }
-}
+ 
