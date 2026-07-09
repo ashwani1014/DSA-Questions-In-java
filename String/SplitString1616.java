@@ -7,36 +7,42 @@ public class SplitString1616 {
 
     public boolean checkPalindromeFormation(String a, String b) {
 
-        return check(a, b) || check(b, a);
+        return check(a,b) || check(b,a);
     }
 
-    boolean check(String a, String b) {
+    public boolean check (String s1,String s2){
+     
+        int left=0;
+        int right=s2.length()-1;
+          while(left<right && s1.charAt(left)==s2.charAt(right)){
+            left++;
+            right--;
+          }
 
-        int l = 0;
-        int r = a.length() - 1;
-
-        while(l < r && a.charAt(l) == b.charAt(r)) {
-            l++;
-            r--;
-        }
-
-        return isPalindrome(a, l, r)
-                || isPalindrome(b, l, r);
+          return isPalindrome(s1, left, right) ||
+               isPalindrome(s2, left, right);
     }
 
-    boolean isPalindrome(String s, int l, int r) {
+    boolean isPalindrome(String s, int left, int right) {
 
-        while(l < r) {
+        while (left < right) {
 
-            if(s.charAt(l) != s.charAt(r)) {
+            if (s.charAt(left) != s.charAt(right)) {
                 return false;
             }
 
-            l++;
-            r--;
+            left++;
+            right--;
         }
+          
+          return false;
+            
 
-        return true;
+
+
     }
-}
+
+    
+    }
+
  
