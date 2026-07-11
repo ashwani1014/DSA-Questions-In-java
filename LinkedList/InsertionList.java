@@ -33,6 +33,31 @@ public class InsertionList {
         System.out.print("null");
     }
 
+
+    // Index Insertion 
+    
+    void IndexInsert(int index , int data ){
+           
+        if(head==null){
+            insert(data);
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
     public static void main(String[]args){
         InsertionList list =new InsertionList();
         list.insert(20);
