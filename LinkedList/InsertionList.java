@@ -41,10 +41,14 @@ public class InsertionList {
         if(head==null){
             insert(data);
         }
-
-
-
-
+          
+        Node temp=head;
+        for(int i=0;i<index;i++){
+            temp=temp.next;
+        }
+        Node head=new Node();
+       
+          
 
 
     }
