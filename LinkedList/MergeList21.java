@@ -1,3 +1,4 @@
+package LinkedList;
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,7 +9,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class MergeList21 {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         ListNode ans = new ListNode();
