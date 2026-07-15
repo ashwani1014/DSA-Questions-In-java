@@ -1,16 +1,16 @@
 package Array;
 
-public class 1389shift {
-    
-   
+import java.util.ArrayList;
+
+// LeetCode 1389: Create Target Array in the Given Order
+class Shift1389 {
+
     public int[] createTargetArray(int[] nums, int[] index) {
 
         ArrayList<Integer> target = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-
             int a = index[i];
-
             target.add(a, nums[i]);
         }
 
@@ -23,4 +23,3 @@ public class 1389shift {
         return ans;
     }
 }
- 

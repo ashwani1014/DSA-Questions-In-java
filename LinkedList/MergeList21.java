@@ -1,15 +1,16 @@
 package LinkedList;
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-class MergeList21 {
+
+// LeetCode 21: Merge Two Sorted Lists
+public class MergeList21 {
+
+    public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
+
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         ListNode ans = new ListNode();
@@ -29,7 +30,7 @@ class MergeList21 {
             }
             ans = ans.next;
         }
-        
+
         while (f != null) {
             ans.next = f;
             f = f.next;
@@ -43,6 +44,5 @@ class MergeList21 {
         }
 
         return temp.next;
-
     }
 }

@@ -1,4 +1,10 @@
-class Solution {
+package String;
+
+import java.util.Stack;
+
+// LeetCode 227: Basic Calculator II
+public class Basiccal227 {
+
     public int calculate(String s) {
 
         Stack<Integer> stack = new Stack<>();
@@ -18,14 +24,11 @@ class Solution {
 
                 if (sign == '+') {
                     stack.push(num);
-                }
-                else if (sign == '-') {
+                } else if (sign == '-') {
                     stack.push(-num);
-                }
-                else if (sign == '*') {
+                } else if (sign == '*') {
                     stack.push(stack.pop() * num);
-                }
-                else if (sign == '/') {
+                } else if (sign == '/') {
                     stack.push(stack.pop() / num);
                 }
 

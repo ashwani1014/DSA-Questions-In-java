@@ -1,32 +1,34 @@
+package String;
 
-/**
- * // This is the interface that allows for creating nested lists.
- * // You should not implement it, or speculate about its implementation
- * public class NestedInteger {
- *     // Constructor initializes an empty nested list.
- *     public NestedInteger() {}
- *
- *     // Constructor initializes a single integer.
- *     public NestedInteger(int value) {}
- *
- *     // @return true if this NestedInteger holds a single integer.
- *     public boolean isInteger() {}
- *
- *     // @return the single integer that this NestedInteger holds.
- *     public Integer getInteger() {}
- *
- *     // Set this NestedInteger to hold a single integer.
- *     public void setInteger(int value) {}
- *
- *     // Set this NestedInteger to hold a nested list.
- *     public void add(NestedInteger ni) {}
- *
- *     // @return the nested list that this NestedInteger holds.
- *     public List<NestedInteger> getList() {}
- * }
- */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 
-class Solution {
+// LeetCode 385: Mini Parser
+// NestedInteger interface stub for compilation
+public class MiniParser385 {
+
+    // Stub implementation of NestedInteger for local compilation
+    static class NestedInteger {
+        private Integer value;
+        private List<NestedInteger> list;
+
+        public NestedInteger() {
+            this.list = new ArrayList<>();
+        }
+
+        public NestedInteger(int value) {
+            this.value = value;
+            this.list = new ArrayList<>();
+        }
+
+        public boolean isInteger() { return value != null; }
+        public Integer getInteger() { return value; }
+        public void setInteger(int value) { this.value = value; }
+        public void add(NestedInteger ni) { this.list.add(ni); }
+        public List<NestedInteger> getList() { return list; }
+    }
+
     public NestedInteger deserialize(String s) {
 
         // Single number
@@ -48,20 +50,16 @@ class Solution {
                     stack.push(curr);
                 }
                 curr = new NestedInteger();
-            }
-            else if (c == '-') {
+            } else if (c == '-') {
                 negative = true;
-            }
-            else if (Character.isDigit(c)) {
+            } else if (Character.isDigit(c)) {
                 num = num * 10 + (c - '0');
                 hasNum = true;
-            }
-            else if (c == ',' || c == ']') {
+            } else if (c == ',' || c == ']') {
 
                 if (hasNum) {
                     if (negative) num = -num;
                     curr.add(new NestedInteger(num));
-
                     num = 0;
                     negative = false;
                     hasNum = false;

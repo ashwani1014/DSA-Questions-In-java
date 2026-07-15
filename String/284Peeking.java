@@ -1,7 +1,9 @@
+package String;
 
 import java.util.Stack;
 
-public class PeekExample {
+// LeetCode 284: Peeking Iterator - Stack peek() demo
+class Peeking284 {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
 
@@ -10,10 +12,6 @@ public class PeekExample {
         stack.push(30);
 
         System.out.println("Top element: " + stack.peek()); // 30
-
-        System.out.println("Stack after peek: " + stack); // [10, 20, 30]
+        System.out.println("Stack after peek: " + stack);   // [10, 20, 30]
     }
 }
-
-
-

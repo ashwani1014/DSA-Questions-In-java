@@ -1,55 +1,18 @@
+package String;
+
+// LeetCode 1545: Find Kth Bit in Nth Binary String
 public class FindKth1545 {
-    
 
-    package String;
+    public char findKthBit(int n, int k) {
+        if (n == 1) return '0';
+        int len = (1 << n) - 1; // length of Sn
+        int mid = len / 2 + 1;
 
-public class JumpGame1871 {
+        if (k == mid) return '1';
+        if (k < mid) return findKthBit(n - 1, k);
 
-    private Boolean[] memo;
-
-    public boolean canReach(String s, int minJump, int maxJump) {
-
-        memo = new Boolean[s.length()];
-
-        return dfs(0, s, minJump, maxJump);
+        // k > mid: it's the inverted + reversed part
+        char c = findKthBit(n - 1, len - k + 1);
+        return c == '0' ? '1' : '0';
     }
-
-    private boolean dfs(int index, String s, int minJump, int maxJump) {
-
-        if (index == s.length() - 1) {
-            return true;
-        }
-
-        if (memo[index] != null) {
-            return memo[index];
-        }
-
-        for (int i = index + minJump;
-             i <= Math.min(index + maxJump, s.length() - 1);
-             i++) {
-
-            if (s.charAt(i) == '0') {
-
-                if (dfs(i, s, minJump, maxJump)) {
-                    memo[index] = true;
-                    return true;
-                }
-            }
-        }
-
-        memo[index] = false;
-        return false;
-    }
-
-    public static void main(String[] args) {
-
-        JumpGame1871 obj = new JumpGame1871();
-
-        String s = "011010";
-        int minJump = 2;
-        int maxJump = 3;
-
-        System.out.println(obj.canReach(s, minJump, maxJump));
-    }
-}
 }

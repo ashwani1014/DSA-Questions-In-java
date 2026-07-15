@@ -1,9 +1,14 @@
 package LinkedList;
-java.util.*;
-public class Reverse206 {
-    
 
-     
+// LeetCode 206: Reverse Linked List
+public class Reverse206 {
+
+    public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; }
+    }
+
     public ListNode reverseList(ListNode head) {
 
         ListNode last = null;
@@ -12,15 +17,11 @@ public class Reverse206 {
         while (temp != null) {
 
             ListNode nextNode = temp.next;
-
             temp.next = last;
-
             last = temp;
-
             temp = nextNode;
         }
 
         return last;
     }
 }
- 
