@@ -1,32 +1,28 @@
 package Array;
+
 import java.util.*;
+
 class candies1431 {
-    public static  List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
-         
-          List<Boolean> ans=new ArrayList<>();
-             
+  public static List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
+
+    List<Boolean> ans = new ArrayList<>();
+
     int max = candies[0];
 
-for(int i = 1; i < candies.length; i++) {
-    if(candies[i] > max) {
+    for (int i = 1; i < candies.length; i++) {
+      if (candies[i] > max) {
         max = candies[i];
+      }
     }
-}
 
+    for (int i = 0; i < candies.length; i++) {
+      if (max <= candies[i] + extraCandies) {
+        ans.add(true);
+      } else {
+        ans.add(false);
+      }
 
-
-
-           for(int i=0;i<candies.length;i++){
-          if(max<=candies[i]+extraCandies){
-            ans.add(true);
-          }
-          else{
-            ans.add(false);
-          }
-           
-
- 
-           }
-            return ans;
     }
+    return ans;
+  }
 }
