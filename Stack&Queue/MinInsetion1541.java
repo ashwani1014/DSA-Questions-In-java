@@ -1,4 +1,4 @@
-package Stack&Queue;
+package  Stack&Queue;
 
 public class MinInsetion1541 {
     import java.util.Stack;
