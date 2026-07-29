@@ -1,5 +1,6 @@
+package MinStack;
 public class MinStack155 {
-    
+
     import java.util.Stack;
 
  
