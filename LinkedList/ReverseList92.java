@@ -1,5 +1,7 @@
 package LinkedList;
 
+import LinkedList.Cycle141.ListNode;
+
 public class ReverseList92 {
     
     /**
@@ -12,9 +14,10 @@ public class ReverseList92 {
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+
  
     public ListNode reverseBetween(ListNode head, int left, int right) {
-
+ 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
 

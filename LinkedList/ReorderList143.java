@@ -1,8 +1,10 @@
 package LinkedList;
 
+import LinkedList.Cycle141.ListNode;
+
 public class ReorderList143 {
     
-
+ 
       public ListNode middleNode(ListNode head) {
         ListNode f = head;
         ListNode s = head;
