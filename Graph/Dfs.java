@@ -35,6 +35,27 @@ public class Dfs {
     }
 
     static void bfs(ArrayList<ArrayList<Integer>> adj,int V){
+
+        boolean visited []=new boolean[V];
+
+        Queue<Integer> q=new LinkedList<>();
+
+        visited[0]=true;
+
+        q.offer(0);
+
+        while(!q.isEmpty()){
+            int node=q.poll();
+
+            System.out.print(node + " ");
+
+            for(int neighbour : adj.get(node)){
+                if(!visited[neighbour]){
+                    visited[neighbour]=true;
+                    q.offer(neighbour);
+                }
+            }
+        }
         
     }
 }
