@@ -1,4 +1,4 @@
-package DP;
+package DynamicPr;
 
 import java.util.Arrays;
 

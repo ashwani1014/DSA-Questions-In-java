@@ -3,7 +3,11 @@ package LinkedList;
 import LinkedList.Cycle141.ListNode;
 
 public class Sort148 {
-    
+     public static class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) { val = x; next = null; }
+    }
  
   public ListNode sortList(ListNode head) {
 

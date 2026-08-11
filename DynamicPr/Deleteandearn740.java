@@ -1,3 +1,4 @@
+package DynamicPr;
 import java.util.Arrays;
 
 public class Deleteandearn740 {

@@ -30,11 +30,11 @@ public class Dfs {
             adj.get(v).add(u);
         }
 
-        bfs(adj,V);
+        counts(adj,V);
         sc.close();
     }
 
-    static void bfs(ArrayList<ArrayList<Integer>> adj,int V){
+    public static  void counts(List<List<Integer>> adj,int V){
 
         boolean visited []=new boolean[V];
 
@@ -52,7 +52,7 @@ public class Dfs {
             for(int neighbour : adj.get(node)){
                 if(!visited[neighbour]){
                     visited[neighbour]=true;
-                    q.offer(neighbour);
+                    q.add(neighbour);
                 }
             }
         }
