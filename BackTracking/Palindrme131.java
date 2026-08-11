@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Palindrme131 {
-    class Solution {
-
+    
     List<List<String>> ans = new ArrayList<>();
     List<String> path = new ArrayList<>();
 
@@ -63,4 +62,4 @@ public class Palindrme131 {
         return true;
     }
 }
-}
+ 
