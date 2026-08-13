@@ -1,29 +1,30 @@
-package LinkedList;
-
-// LeetCode 141: Linked List Cycle
-public class Cycle141 {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; next = null; }
-    }
-
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
+public class Solution {
     public boolean hasCycle(ListNode head) {
 
-        ListNode f = head;
-        ListNode s = head;
+       
+        ListNode fast = head;
+        ListNode slow = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
 
-        while (f != null && f.next != null) {
-
-            f = f.next.next;
-            s = s.next;
-
-            if (f == s) {
+            if (slow == fast) {
                 return true;
             }
         }
 
         return false;
+
     }
 }
