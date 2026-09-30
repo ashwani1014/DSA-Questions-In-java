@@ -1,18 +1,26 @@
 public class LongestNice1763 {
     class Solution {
-        public String longestNiceSubstring(String s) {
-            String ans = "";
-            for (int right = 0; right < s.length() - 1; right++) {
+    public String longestNiceSubstring(String s) {
 
-                if (s.charAt(right) - s.charAt(right + 1) == 0 ||
-                        s.charAt(right) - s.charAt(right + 1) == 32 ||
-                        s.charAt(right) - s.charAt(right + 1) == -32) {
-
-                    ans = ans + s.charAt(right + 1);
-                }
-
-            }
-            return ans;
+        if (s.length() < 2) {
+            return "";
         }
+
+        for (int i = 0; i < s.length(); i++) {
+
+            char c = s.charAt(i);
+
+            if (!s.contains("" + Character.toLowerCase(c)) ||
+                !s.contains("" + Character.toUpperCase(c))) {
+
+                String left = longestNiceSubstring(s.substring(0, i));
+                String right = longestNiceSubstring(s.substring(i + 1));
+
+                return left.length() >= right.length() ? left : right;
+            }
+        }
+
+        return s;
     }
+}
 }
