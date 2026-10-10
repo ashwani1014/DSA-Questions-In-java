@@ -1,27 +1,32 @@
+package TwoPointer;
 
-class Solution {
+import java.util.*;
 
-    public int findRadius(int[] houses, int[] heaters) {
+public class Heater475 {
+    class Solution {
 
-        Arrays.sort(houses);
-        Arrays.sort(heaters);
+        public int findRadius(int[] houses, int[] heaters) {
 
-        int i = 0;
-        int j = 0;
+            Arrays.sort(houses);
+            Arrays.sort(heaters);
 
-        int minRadius = 0;
+            int i = 0;
+            int j = 0;
 
-        while (i < houses.length) {
+            int minRadius = 0;
 
-            while (j < heaters.length - 1
-                    && Math.abs(houses[i] - heaters[j]) >= Math.abs(houses[i] - heaters[j + 1])) {
-                j++;
+            while (i < houses.length) {
+
+                while (j < heaters.length - 1
+                        && Math.abs(houses[i] - heaters[j]) >= Math.abs(houses[i] - heaters[j + 1])) {
+                    j++;
+                }
+
+                minRadius = Math.max(minRadius, Math.abs(houses[i] - heaters[j]));
+                i++;
             }
 
-            minRadius = Math.max(minRadius, Math.abs(houses[i] - heaters[j]));
-            i++;
+            return minRadius;
         }
-
-        return minRadius;
     }
 }
