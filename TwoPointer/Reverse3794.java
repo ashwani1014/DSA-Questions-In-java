@@ -1,8 +1,21 @@
-package TwoPointer;
+class Solution {
+    public String reversePrefix(String word, int k) {
 
-/**
- * Reverse3794
- */
-public class Reverse3794 {
+        k--;
+        char[] arr = word.toCharArray();
 
+        int left = 0;
+        int right = k;
+
+        while (left < right) {
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            left++;
+            right--;
+        }
+
+        return new String(arr);
+    }
 }
