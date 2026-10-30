@@ -19,10 +19,10 @@ class Solution {
                 stack.pop();
                 count++;
             } else {
-                
+
                 count++;
             }
-             stack.push(arr[i]);
+            stack.push(arr[i]);
         }
 
         return count;
