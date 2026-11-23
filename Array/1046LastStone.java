@@ -7,7 +7,7 @@ class Solution {
             list.add(stone);
         }
 
-        while (list.size() > 1) {
+        while (list.size() > 1) 
 
             Collections.sort(list);
 
