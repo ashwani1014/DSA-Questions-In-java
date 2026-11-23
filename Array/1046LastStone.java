@@ -3,7 +3,7 @@ class Solution {
 
         ArrayList<Integer> list = new ArrayList<>();
 
-        for (int stone : stones) {
+        for (int stone : stones
             list.add(stone);
         }
 
