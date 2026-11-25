@@ -5,6 +5,8 @@ class Solution {
         if (root == null) return;
 
         Stack<TreeNode> stack = new Stack<>();
+
+        
         stack.push(root);
 
         while (!stack.isEmpty()) {
