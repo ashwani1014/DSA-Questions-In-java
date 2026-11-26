@@ -1,1 +1,39 @@
 
+
+class Solution {
+    public long shadowPairs(int[] nums) {
+        int n = nums.length;
+        int[] stack = new int[n];
+        int top = -1;
+
+        long ans = 0;
+
+        for (int x : nums) {
+
+            // Count elements smaller than x
+            int low = 0, high = top;
+
+            while (low <= high) {
+                int mid = low + (high - low) / 2;
+
+                if (stack[mid] < x) {
+                    low = mid + 1;
+                } else {
+                    high = mid - 1;
+                }
+            }
+
+            ans += low;
+
+            // Remove elements greater than x
+            while (top >= 0 && stack[top] > x) {
+                top--;
+            }
+
+            // Add current element
+            stack[++top] = x;
+        }
+
+        return ans;
+    }
+}
